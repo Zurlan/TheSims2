@@ -1,48 +1,48 @@
-/* Sims 2-Inspired Styles */
+/* Sims 2 Bright Theme */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', sans-serif;
-  background: linear-gradient(to bottom, #0d426d, #2a7bb3);
-  color: #e8f4ff;
+  background: linear-gradient(to bottom, #b0e2ff, #dff6ff); /* light aqua blue */
+  color: #083d29;
   text-align: center;
 }
 
 .container {
   max-width: 800px;
-  margin: 5vh auto;
-  padding: 2rem;
-  background-color: rgba(13, 66, 109, 0.85);
-  border-radius: 15px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  margin: 6vh auto;
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   font-size: 3rem;
+  color: #1c6b4e;
   margin-bottom: 0.5rem;
-  color: #dff6ff;
-  text-shadow: 1px 1px #003c66;
+  text-shadow: 1px 1px #a9d7c3;
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #094c39;
 }
 
 .btn {
-  background: linear-gradient(to bottom, #85e04a, #4ca42d);
-  color: #062c00;
+  background: linear-gradient(to bottom, #b6f57b, #6dc54a);
+  color: #083d29;
   text-decoration: none;
   padding: 1rem 2rem;
   font-size: 1.3rem;
   border-radius: 12px;
-  box-shadow: 0 4px #2f6316;
+  box-shadow: 0 3px #519c3b;
   transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-  background: linear-gradient(to bottom, #9ff86a, #5bc938);
-  box-shadow: 0 6px #2f6316;
+  background: linear-gradient(to bottom, #d7fdb3, #84e463);
   transform: scale(1.05);
 }
