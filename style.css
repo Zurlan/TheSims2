@@ -1,0 +1,17 @@
+body {
+  background: #1e1e1e;
+  color: #eee;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 3rem;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
