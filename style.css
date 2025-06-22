@@ -1,47 +1,49 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', sans-serif;
-  background-color: #d4f1ff; /* bright sky blue */
-  background-image: linear-gradient(to bottom, #d4f1ff, #b6e9f5); /* soft gradient */
-  color: #064421;
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.product-card {
+  background: #ffffffee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
+  flex: 1 1 240px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 6vh auto;
-  padding: 2.5rem;
-  background-color: #ffffffd0; /* semi-transparent white */
-  border-radius: 16px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-h1 {
-  font-size: 3rem;
-  color: #1a5d32;
-  margin-bottom: 0.5rem;
-  text-shadow: 1px 1px #9be69e;
-}
-
-p {
+.product-card h2 {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
+  color: #1a5d32;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
   color: #125c30;
 }
 
-.btn {
-  background: linear-gradient(to bottom, #aefc85, #66cc33);
-  color: #062c00;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  border-radius: 12px;
-  box-shadow: 0 3px #3a8024;
-  transition: all 0.2s ease-in-out;
+.product-card.placeholder {
+  background: #e5f6fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn:hover {
-  background: linear-gradient(to bottom, #caffab, #7fe75c);
-  transform: scale(1.05);
+.placeholder-box {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #6d8b9e;
 }
