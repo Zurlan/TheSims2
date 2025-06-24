@@ -1,3 +1,43 @@
+<!-- Video Intro Overlay -->
+<div id="intro-video">
+  <video autoplay muted playsinline onended="fadeOutVideo()" id="landingVideo">
+    <source src="0623-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<!-- Main Site Content -->
+<div id="main-content" style="display:none;">
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="assets/sims2-boxart.jpg" alt="Sims 2 AIO" />
+      <h2>Sims 2 AIO Installer</h2>
+      <p>All expansions, one-click setup. DRM-free. Compatible with modern systems.</p>
+      <a class="btn" href="https://yourcheckoutlink.com" target="_blank">Buy Now</a>
+    </div>
+
+    <!-- Placeholder for future products -->
+    <div class="product-card placeholder">
+      <div class="placeholder-box">Coming Soon</div>
+    </div>
+
+    <div class="product-card placeholder">
+      <div class="placeholder-box">Coming Soon</div>
+    </div>
+  </div>
+</div>
+
+<!-- Fade Script -->
+<script>
+  function fadeOutVideo() {
+    const intro = document.getElementById('intro-video');
+    intro.classList.add('fade-out');
+    setTimeout(() => {
+      intro.style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }, 2000); // match fade animation duration
+  }
+</script>
 <div class="product-grid">
   <div class="product-card">
     <img src="assets/sims2-boxart.jpg" alt="Sims 2 AIO" />
