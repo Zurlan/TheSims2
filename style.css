@@ -17,8 +17,8 @@
 }
 
 .product-card img {
-  width: 60%;
-  max-width: 90px;
+  width: 90px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 10px;
@@ -38,18 +38,6 @@
   color: #125c30;
 }
 
-.product-card.placeholder {
-  background: #e5f6fc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholder-box {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #6d8b9e;
-}
 #intro-video {
   position: fixed;
   top: 0; left: 0;
@@ -108,7 +96,7 @@
 }
 
 body {
-  background-color: var(--sims-gray);
+  background-color: #3ca4e3;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   color: var(--sims-dark);
