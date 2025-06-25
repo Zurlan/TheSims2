@@ -9,7 +9,14 @@
 <!--</div>-->
 
 <!-- Main Site Content -->
-<div id="main-content" style="display:none;">
+<!-- Video Logo at Top -->
+<div id="logo-container" style="text-align: center; margin-top: 20px;">
+  <video autoplay muted playsinline loop style="max-width: 200px; height: auto;">
+    <source src="0623-1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div id="main-content" style="display: block;">
   <div class="product-grid">
     <div class="product-card featured" style="width: 250px;">
       <img src="./zLMId0c.png" alt="The Sims 2 Ultimate Collection" style="width: 120px; height: 120px; object-fit: cover;" />
@@ -26,13 +33,13 @@
 </div>
 
 <!-- Fade Script -->
-<script>
-  function fadeOutVideo() {
-    const intro = document.getElementById('intro-video');
-    intro.classList.add('fade-out');
-    setTimeout(() => {
-      intro.style.display = 'none';
-      document.getElementById('main-content').style.display = 'block';
-    }, 2000);
-  }
-</script>
+<!--<script>-->
+ <!-- function fadeOutVideo() { -->
+   <!-- const intro = document.getElementById('intro-video');-->
+   <!-- intro.classList.add('fade-out');-->
+    <!--setTimeout(() => {-->
+     <!-- intro.style.display = 'none';-->
+     <!-- document.getElementById('main-content').style.display = 'block';-->
+   <!-- }, 2000);-->
+<!--  }-->
+<!--</script>-->
