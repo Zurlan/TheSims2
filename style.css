@@ -1,13 +1,30 @@
+/* Base Reset and Global Styling */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #3ca4e3 url('Capture.JPG') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e1e1e;
+}
+
+/* Logo Video */
 #logo-container video {
   width: 200px;
   height: 120px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
-  border-radius: 8px; /* optional, just for finesse */
+  border-radius: 8px;
 }
 
-
+/* Product Grid */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +41,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   flex: 1 1 240px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  color: #1e1e1e;
+}
+
+.product-card.featured {
+  border: 2px solid #2da85d;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .product-card img {
@@ -37,15 +62,35 @@
 .product-card h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #1a5d32;
+  color: #004d99;
 }
 
 .product-card p {
   font-size: 0.95rem;
   margin-bottom: 1.2rem;
-  color: #125c30;
+  color: #1e1e1e;
 }
 
+/* Button Styling */
+.btn.primary {
+  display: inline-block;
+  background: linear-gradient(to right, #2da85d, #3ed087);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(to right, #3ed087, #2da85d);
+  transform: scale(1.05);
+}
+
+/* Intro Video Overlay */
 #intro-video {
   position: fixed;
   top: 0; left: 0;
@@ -74,100 +119,25 @@
     visibility: hidden;
   }
 }
-.product-card.featured {
-  border: 2px solid #1a5d32;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
 
-.btn.primary {
-  display: inline-block;
-  background: linear-gradient(to right, #2e8b57, #3cb371);
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s;
-}
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+  .product-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
 
-.btn.primary:hover {
-  background: linear-gradient(to right, #3cb371, #2e8b57);
-  transform: scale(1.03);
-}
-:root {
-  --sims-green: #2da85d;
-  --sims-blue: #004d99;
-  --sims-gray: #3ca4e3;
-  --sims-dark: #1e1e1e;
-}
+  #logo-container video {
+    width: 100%;
+    height: auto;
+  }
 
-body {
-  background-color: #3ca4e3;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  color: var(--sims-dark);
-}
+  marquee {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
 
-.product-card.featured {
-  border: 2px solid var(--sims-green);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  background-color: #ffffffee;
-}
-
-.product-card h2 {
-  color: var(--sims-blue);
-}
-
-.product-card p {
-  color: var(--sims-dark);
-  font-size: 0.95rem;
-}
-
-.btn.primary {
-  display: inline-block;
-  background: linear-gradient(to right, var(--sims-green), #3ed087);
-  color: white;
-  padding: 0.8rem 1.2rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.btn.primary:hover {
-  background: linear-gradient(to right, #3ed087, var(--sims-green));
-  transform: scale(1.05);
-}
-
-#intro-video {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: black;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#intro-video video {
-  width: 100%;
-  height: auto;
-  max-height: 100vh;
-  object-fit: cover;
-}
-
-#intro-video.fade-out {
-  animation: fadeOut 2s forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
+  body {
+    background-position: top center;
   }
 }
